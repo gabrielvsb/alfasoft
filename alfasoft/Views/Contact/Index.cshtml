@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.Contact)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" class="btn btn-primary" title="Edit contact" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a> 
+                <a asp-action="Details" class="btn btn-secondary" title="Details from contact" asp-route-id="@item.Id"><i class="bi bi-file-earmark-medical-fill"></i></a>
+                <a asp-action="Delete" class="btn btn-danger" title="Delete contact" asp-route-id="@item.Id"><i class="bi bi-trash-fill"></i></a>
             </td>
         </tr>
 }
