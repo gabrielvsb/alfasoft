@@ -17,7 +17,9 @@ namespace alfasoft.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(9)]
+        [StringLength(9, ErrorMessage = "Contact must have 9 digits")]
+        [MinLength(9, ErrorMessage = "Contact must have 9 digits")]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Contact must be numeric")]
         public string Contact { get; set; }
     }
 }
